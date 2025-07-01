@@ -11,12 +11,12 @@ func main(){
 	log.SetFlags(0)
 
 	//implement err handling
-	//message, err := greetings.Hello("hello, people ma name's markiplier")
-	message, err := greetings.Hello("mark")
+	names := []string{"ma buoy", "ya buoy", "ma gal", "ya gal"}
+	messages, err := greetings.Hellos(names)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	//get a greeting message and print it
-	fmt.Println(message)
+	fmt.Println(messages)
 }
