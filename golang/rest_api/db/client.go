@@ -9,7 +9,7 @@ import (
 )
 
 func NewClient() *ent.Client {
-	client, err := ent.Open(dialect.SQLite, "file:tasks.do?_fk=1")
+	client, err := ent.Open(dialect.SQLite, "file:tasks.db?_fk=1")
 	if err != nil {
 		log.Fatalf("you dun fucked up [SQLite ver], %v", err)
 	}
