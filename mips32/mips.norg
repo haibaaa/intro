@@ -1,0 +1,26 @@
+* basics
+
+** operations (brief)
+  - for most operators data flows from right to left
+
+@note
+  # represents immediates and $ represents registers or predefined vars
+@end
+
+@code mips
+    # load/store
+    li  $dst, #immediate        # load immediate
+    la  $dst, $symbol           # load address
+    lw  $dst, offset($src)      # load word
+
+    # data flows left to right (reg to dst)
+    sw  $reg, offset($dst)      # store word
+@end
+
+** syscalls 
+   basically api calls to the kernel because you are in usermode
+   command is literally called syscall
+
+   syscall code:    [$v0]
+   syscall params:  [$a0-a3]
+
